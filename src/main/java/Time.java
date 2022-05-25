@@ -8,7 +8,7 @@ import java.util.TimerTask;
 public class Time {
 
     static int currentHour=getRealHour(), currentMinute=getRealMinute();
-     static String currentTime;
+    static String currentTime;
 
 
     public static int getRealHour(){
@@ -45,14 +45,19 @@ public class Time {
 
 
     public static void main(String[]args){
+
         Timer t = new Timer();
         t.schedule(new TimerTask() {
             @Override
             public void run() {
-                String current=getCurrentTime();
-                System.out.println(current);
+
+                System.out.println(2);
             }
         }, 0, 1000);
+
+        Clock c= new Clock();
+        c.run();
+
     }
 
 }
